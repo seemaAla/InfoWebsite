@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+  <script src="script.js"></script>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Home page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+
+<body>
+
+  <img src="images/ramadan-main.jpg"
+    style="position: fixed; right: 0%; top:-250px; bottom:1%; min-width:100%; min-height: 100%; opacity:1;">
+
+
+  <div style="position:sticky; color:white; font-size:25px;">
+    <h1>quick survey on you knowledge</h1>
+    <ol>
+      <li>
+        <form action="main-page.html" method="post">
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname" placeholder="enter your first name" required><br><br>
+          
+          
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" placeholder="enter your last name" required><br><br>
+          <br>
+          <button type="button" onclick="pushdata()">push data</button>
+      </li>
+
+      <a href=Introduction.html>sign in</a>
+
+
+      <li>
+        <p>how much do you know about ramadan?</p>
+        <label for="alot">A lot</label>
+        <input type="radio" id="alot" name="know" value="alot" required>
+        <label for="a little">A little</label>
+        <input type="radio" id="a little" name="know" value="a little">
+        <label for="nothing"> I know nothing at all</label>
+        <input type="radio" id="nothing" name="know" value="nothing"> <br><br>
+      </li>
+
+      <li>
+        <p>what country did islam originate in?</p>
+        <select id="selCountry">
+          <option selected value="Japan"> Japan</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Eygpt">Egypt</option>
+          <option value="USA">USA</option><br><br>
+        </select>
+      </li>
+
+      <li>
+        <p>what do muslims restrain from doing durinng ramadan? choose wisely </p>
+        <input type="checkbox" id="cursing name=" cursing" value="cursing" required>
+        <label for="cursing">cursing</label><br>
+        <input type="checkbox" id="eat" name="eat" value="eat" required>
+        <label for="eat">abstinence from foods during daylight</label><br>
+        <input type="checkbox" id="pray" name="pray" value="pray">
+        <label for="pray"> praying</label><br>
+        <input type="checkbox" id="drink" name="drink" value="drink" required>
+        <label for="drink"> abstinence from drinks during daylight</label><br>
+        <input type="checkbox" id="go out" name="go out" value="go out">
+        <label for="go out"> going out</label><br>
+        <input type="checkbox" id="smoking" name="smoking" value="smoking" required>
+        <label for="smoking"> smoking</label><br><br>
+      </li>
+
+      <li>
+        <p> from 1 to 10 how much are you excited to view this website?? ;)</p>
+      </li>
+
+      <div class="slidecontainer">
+        <input type="range" min="1" max="10" value="5" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+      </div>
+
+
+      <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+          output.innerHTML = this.value;
+        }
+      </script>
+
+      <input type="submit" value="Submit">
+      </form>
+
+    </ol>
+  </div>
+
+
+</body>
+
+</html
